@@ -296,11 +296,11 @@ describe('service/property', () => {
 			expect(repository.destroy.mock.calls[0][0]).toEqual({where: {id: 2}});
 		})
 
-		// it('should return a promise', async () => {
-		// 	const ret = instance.delete(id);
-        //
-		// 	expect(ret).toBeInstanceOf(Number);
-		// })
+		it('should return a promise', async () => {
+			const ret = instance.delete(id);
+
+			expect(ret).toBeInstanceOf(Promise);
+		})
 
 		it('should return a number of deleted items', async () => {
 			const ret = await  instance.delete(id);

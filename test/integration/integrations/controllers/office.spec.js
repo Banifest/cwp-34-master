@@ -37,7 +37,7 @@ describe('controllers/offices', () => {
 		expect.assertions(2);
 
 		const data = {
-			title: 'Title',
+			title: 'Eee baby',
 			website: 'https://www.tut.by',
 			address: 'Minsk'
 		};
@@ -58,7 +58,7 @@ describe('controllers/offices', () => {
 
 		const item = offices.find((office) => office.title === 'Scout, The');
 
-		item.address = 'Some address';
+		item.address = 'Kokokokoko.kokom';
 
 		await helper.updateOffice(item);
 		offices = await helper.getOffices();
@@ -87,9 +87,9 @@ describe('controllers/offices', () => {
 	it('read agents', async () => {
 		expect.assertions(1);
 
-		const foundedItem = await helper.readAgents({id: 3});
+		const fouondedItem = await helper.readAgents({id: 3});
 
-		expect(foundedItem).toEqual('it is agent');
+		expect(fouondedItem).toEqual('it is agent');
 	});
 });
 
